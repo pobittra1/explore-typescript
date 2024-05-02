@@ -48,24 +48,24 @@
     }
     {
       //function in object called method
-      const objOfFunc: {
-        operationName:
-          | "addition"
-          | "subctraction"
-          | "multiplication"
-          | "division"; //string literal with union operator
-        operationVal1: number;
-        operationVal2?: number; //optional chaining with number type
-        operation: number;
-      } = {
-        operationName: "addition",
-        operationVal1: 12,
-        operationVal2: 15,
-        operation(operationVal1: number, operationVal2: number = 10): number {
-          //optionalVal2 is optional with default value.
-          return operationVal1 + operationVal2;
-        },
-      };
+    //   const objOfFunc: {
+    //     operationName:
+    //       | "addition"
+    //       | "subctraction"
+    //       | "multiplication"
+    //       | "division"; //string literal with union operator
+    //     operationVal1: number;
+    //     operationVal2?: number; //optional chaining with number type
+    //     operation: number;
+    //   } = {
+    //     operationName: "addition",
+    //     operationVal1: 12,
+    //     operationVal2: 15,
+    //     operation(operationVal1: number, operationVal2: number = 10): number {
+    //       //optionalVal2 is optional with default value.
+    //       return operationVal1 + operationVal2;
+    //     },
+    //   };
     }
     {
       //nullise coalescence with union operator
