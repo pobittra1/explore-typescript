@@ -27,9 +27,16 @@
         name: string;
         age: number;
       }
+
       interface MainUserDetails extends UserDetails1 {
         gender: string;
       }
+      //or we can --------------
+      // interface UserDetails2 {
+      //   gender: string;
+      // }
+      // type MainUserDetails = UserDetails1 & UserDetails2;
+
       const UserDetails: MainUserDetails = {
         name: "something",
         age: 12,
@@ -46,7 +53,7 @@
       interface RollInterface {
         [index: number]: number;
       }
-      const rollInterface = [1, 2, 3, 4]; //assign array with interface
+      const rollInterface: RollInterface = [1, 2, 3, 4]; //assign array with interface
     }
     {
       //declare function in type

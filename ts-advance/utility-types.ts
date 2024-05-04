@@ -42,16 +42,21 @@
     //Record type
     //that mean's it is create a structure of type object
     //example
-    type MyRecordData = Record<string,string>;
+    type MyRecordData = Record<string, string>;
 
     const obg1: MyRecordData = {
-        name:"vumi",
-        //age:12 we can't assign number causes it record is string key and string value.
-    }
+      name: "vumi",
+      //age:12 we can't assign number causes it record is string key and string value.
+    };
     {
-        //another example of Record type
-        const emptyObj : Record<string, unknown> = {}
-        const obj1 : 
+      //another example of Record type
+      type emptyObj = Record<string, unknown>;
+      const obj1: emptyObj = {
+        name: "vumi",
+        age: 12,
+        isLogged: false,
+        //we can assign key value as string , number and also boolean it's becouse of we store data type in record that is string key and unknown key value.
+      };
     }
   }
 }

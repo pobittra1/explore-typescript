@@ -17,7 +17,7 @@
   {
     //mezba vai syntax
     //structure of an array by type
-    type GenericArray<T> = Array<T>; //create generic type array
+    type GenericArray<T> = Array<T>; //create generic type array or T[]
     const ids: GenericArray<number> = [1, 2, 3]; // create number array
     const subjects: GenericArray<string> = ["bangla", "english", "mathmatics"]; // create string array
     const booleanArray: GenericArray<boolean> = [true, false, false]; // create boolean array
@@ -43,9 +43,21 @@
   {
     //generic tuple
     type GenericTuple<X, Y> = [X, Y]; //create generic tuple
-    const userDetails: GenericTuple<number, { name: string; age: number }> = [
+    //create interface for data of Y and send it to Generic tuple of Y
+    interface Person {
+      name: string;
+      age: number;
+      email: string;
+      isLogged: boolean;
+    }
+    const userDetails: GenericTuple<number, Person> = [
       12,
-      { name: "something", age: 13 },
+      {
+        name: "something",
+        age: 13,
+        email: "example@email.com",
+        isLogged: false,
+      },
     ];
   }
 }
